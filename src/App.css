@@ -1,4 +1,13 @@
 *{
-    background: black;
-    color: white;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.infoContainer {
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    grid-gap: 150px;
+    /*justify-content: space-between;*/
+    overflow: hidden;
 }
