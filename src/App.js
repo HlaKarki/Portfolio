@@ -1,14 +1,17 @@
 import React from 'react'
 
 import './App.css'
-import { Navbar } from "./components";
+import { Navbar, IntroPersonal, Image } from "./components";
 
 const App = () => {
     return (
         <div className="App">
-            <p>Hello?</p>
             <div>
                 <Navbar/>
+                <div className="infoContainer">
+                    <IntroPersonal/>
+                    <Image/>
+                </div>
             </div>
         </div>
     )
