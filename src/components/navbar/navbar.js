@@ -5,9 +5,7 @@ import gitHubLogo from '../../assests/github-mark/github-mark-white.svg'
 const Navbar = () => {
     return (
         <div className="navbar">
-            <p>
-                <img src={gitHubLogo} alt="GitHub" />
-            </p>
+            <img src={gitHubLogo} alt="GitHub" id="gitHubLogo"/>
         </div>
     )
 }
