@@ -1,7 +1,7 @@
 import React from 'react'
 
 import './App.css'
-import { Navbar, IntroPersonal, Image } from "./components";
+import { Navbar, IntroPersonal, Image, Footer } from "./components";
 
 const App = () => {
     return (
@@ -12,6 +12,7 @@ const App = () => {
                     <IntroPersonal/>
                     <Image/>
                 </div>
+                <Footer/>
             </div>
         </div>
     )
