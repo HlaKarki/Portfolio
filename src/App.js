@@ -1,20 +1,19 @@
 import React from 'react'
 
 import './App.css'
-import { Navbar, IntroPersonal, Image, Footer } from "./components";
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import HomePage from "./pages/homePage/homePage";
+import Projects from "./pages/projectsPage/projects";
 
 const App = () => {
     return (
-        <div className="App">
-            <div>
-                <Navbar/>
-                <div className="infoContainer">
-                    <IntroPersonal/>
-                    <Image/>
-                </div>
-                <Footer/>
-            </div>
-        </div>
+        <BrowserRouter>
+            <Routes>
+                <Route exact path="/" element={<HomePage />}/>
+                <Route exact path="/projectsPage" element={<Projects />}/>
+            </Routes>
+        </BrowserRouter>
     )
 }
 
