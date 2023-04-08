@@ -4,8 +4,8 @@ import myImage from '../../assests/myImage.jpeg'
 
 const Image = () => {
     return (
-        <div>
-            <img src={myImage} alt="Picture of Hla Htun" id="hlaPicture"/>
+        <div className="imageDiv">
+            <img src={myImage} alt="Hla Htun" id="hlaPicture"/>
         </div>
     )
 }
