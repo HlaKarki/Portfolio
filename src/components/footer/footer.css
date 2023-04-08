@@ -1,9 +1,20 @@
 .footerDiv{
     background: #131313;
     color: #a2a2a2;
-    font-family: 'Inter', sans-serif;
 
     display: flex;
     justify-content: space-between;
     padding: 40px 100px;
+}
+
+.footerDiv button {
+    font-family: 'Inter', sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+
+    border: none;
+    background: inherit;
+    color: inherit;
+
+    cursor: pointer;
 }
