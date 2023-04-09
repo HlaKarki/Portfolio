@@ -14,7 +14,6 @@ const IntroPersonal = () => {
             <Link to="/projects">
                 <button id="myProjectsButton">See my Projects</button>
             </Link>
-
         </div>
     )
 }
