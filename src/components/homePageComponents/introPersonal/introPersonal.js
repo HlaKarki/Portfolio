@@ -11,7 +11,7 @@ const IntroPersonal = () => {
             </div>
 
             <h2>Add breakpoints to your blank page, then drop sections to have them responsive out of the box</h2>
-            <Link to="/projectsPage">
+            <Link to="/projects">
                 <button id="myProjectsButton">See my Projects</button>
             </Link>
 
