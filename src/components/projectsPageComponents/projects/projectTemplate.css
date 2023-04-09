@@ -1,0 +1,88 @@
+.project{
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 20px;
+
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+
+    background: #f5f5f5;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+
+    cursor: default;
+}
+
+.imageDisplay{
+    margin: 10px 2.5%;
+    width: 95%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.projectDescription{
+    margin: 0 2.5%;
+}
+
+.projectDescription .p1{
+    font-weight: 500;
+}
+
+.projectDescription .lineBreak {
+    margin: 8px;
+}
+
+.projectDescription .p2{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.75);
+
+}
+
+.projectInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+    font-size: 14px;
+    margin: 5% 2%;
+}
+
+.projectInfo h2, .projectInfo button {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: black;
+}
+
+.projectInfo button{
+    font-size: 25px;
+    border: none;
+    background: inherit;
+    text-decoration: underline;
+    font-style: italic;
+    cursor: pointer;
+}
+
+.projectInfo h2{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: normal;
+    /*color: #848484;*/
+    font-size: 20px;
+}
+
+#gifDemoButton {
+    border: none;
+    background: inherit;
+    cursor: pointer;
+}
+
+/* tablet styles */
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+}
+
+/* phone styles */
+@media only screen and (max-width: 767px) {
+    .projectInfo button{
+        font-size: 20px;
+    }
+}
