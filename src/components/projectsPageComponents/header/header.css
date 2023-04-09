@@ -1,0 +1,10 @@
+.hlaPortfolio{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+
+    padding: 60px;
+}
