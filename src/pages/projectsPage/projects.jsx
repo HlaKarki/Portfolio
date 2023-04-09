@@ -1,10 +1,14 @@
 import React from 'react'
 import './projects.css'
 
+import { Header } from "../../components/projectsPageComponents";
+import { ProjectsContent } from "../../components/projectsPageComponents";
+
 const Projects = () => {
     return (
-        <div>
-            <h1>This is my project page</h1>
+        <div className="contents">
+            <Header />
+            <ProjectsContent />
         </div>
     )
 }
