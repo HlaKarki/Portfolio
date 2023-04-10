@@ -1,8 +1,20 @@
 .imageDiv{
-    height: auto;
+    display: flex;
+    justify-content: flex-start;
+
+    margin: 10% 0 0 10%;
 }
 
 #hlaPicture {
-    width: 100%;
-    height: 100%;
+    max-width: 30%;
+    border-radius: 50%;
+}
+
+/* tablet styles */
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+
+}
+
+/* phone styles */
+@media only screen and (max-width: 767px) {
 }

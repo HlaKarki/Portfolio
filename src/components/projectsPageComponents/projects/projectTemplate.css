@@ -21,14 +21,16 @@
 
 .projectDescription{
     margin: 0 2.5%;
+    font-size: 18px;
 }
 
 .projectDescription .p1{
     font-weight: 500;
+    line-height: 23px;
 }
 
 .projectDescription .lineBreak {
-    margin: 8px;
+    margin: 20px;
 }
 
 .projectDescription .p2{
@@ -36,7 +38,7 @@
     font-style: italic;
     font-weight: 400;
     color: rgba(0, 0, 0, 0.75);
-
+    line-height: 25px;
 }
 
 .projectInfo{
