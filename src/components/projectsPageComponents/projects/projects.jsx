@@ -7,15 +7,6 @@ import guessItGIF from '../../../assests/guessIt.gif'
 
 const ProjectsContent = () => {
 
-    const project1Links = [
-        "https://github.com/HlaKarki/CS361Project/tree/GuessiT.v.2",
-        "https://guessit.herokuapp.com",
-    ];
-    const project2Links = [
-        "https://github.com/trentonyo/riceCAD",
-        "https://ricecad.herokuapp.com",
-    ];
-
     const [repoLink, setRepoLink] = useState("");
     const [webLink, setWebLink] = useState("");
 
@@ -23,6 +14,15 @@ const ProjectsContent = () => {
         window.location.href = link
     }
     useEffect(() => {
+        const project1Links = [
+            "https://github.com/HlaKarki/CS361Project/tree/GuessiT.v.2",
+            "https://guessit.herokuapp.com",
+        ];
+        const project2Links = [
+            "https://github.com/trentonyo/riceCAD",
+            "https://ricecad.herokuapp.com",
+        ];
+
         const links = document.querySelector(".links");
         const modalBackdrop = document.getElementById("modal-backdrop");
         const linkButtons = document.querySelectorAll(".linkButton");
