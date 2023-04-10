@@ -18,3 +18,19 @@
 
     cursor: pointer;
 }
+
+
+/* tablet styles */
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+}
+
+/* phone styles */
+@media only screen and (max-width: 767px) {
+    .footerDiv{
+        padding: 40px 40px;
+    }
+
+    .footerDiv button {
+        font-size: 20px;
+    }
+}

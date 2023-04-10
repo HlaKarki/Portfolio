@@ -1,6 +1,5 @@
 .infos{
-    max-width: 50vw;
-    padding: 70px 40px;
+    padding: 2% 10%;
     margin-top: 20px;
 
     font-family: 'Inter Tight', sans-serif;
@@ -9,30 +8,107 @@
 }
 
 .introNameSE{
-    font-size: 20px;
+    font-size: 30px;
     margin: 20px 0;
 }
 
-.infos h2 {
-    font-family: 'Inter', sans-serif;
-    font-weight: normal;
-    color: #848484;
-    margin-bottom: 20px;
-
-    line-height: 40px;
-    max-width: 75%;
+.introNameSE h1:nth-of-type(2) {
+    font-size: 45px;
+    color: #9d9d9d;
 }
 
-#myProjectsButton{
-    padding: 12px;
-    background: #232324;
-    color: whitesmoke;
-    border-radius: 8px;
-    border: none;
-    box-shadow: 0 0 10px 2px gray;
+.infos h2 {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: normal;
+    color: #4c4c4c;
+    margin-bottom: 7%;
 
-    font-family: inherit;
+    line-height: 40px;
+}
+
+.projectLinkButton {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    font-weight: bolder;
     letter-spacing: 1px;
-    font-size: 14px;
-    font-weight: bold;
+    position: relative;
+    padding: 35px 50px;
+    margin-bottom: 10%;
+    background: #151515;
+    color: whitesmoke;
+    border: none;
+    box-shadow: 0 0 15px 2px gray;
+    border-radius: 10px;
+
+    transition: background-color 0.5s ease;
+}
+.projectLinkButton svg {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+}
+.projectLinkButton rect {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 8px;
+    stroke-dasharray: 1000, 50;
+    transition: all 0.70s linear;
+    animation: color-change 3s infinite;
+}
+
+@keyframes color-change {
+    0% {
+        stroke: #98f8a2;
+    }
+    25% {
+        stroke: #f8e598;
+    }
+    50% {
+        stroke: #f898a4;
+    }
+    75% {
+        stroke: #98d8f8;
+    }
+    100% {
+        stroke: #98f8a2;
+    }
+}
+
+.projectLinkButton:hover rect {
+    stroke-width: 12;
+    stroke-dasharray: 70, 280;
+    stroke-dashoffset: 48;
+    transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.projectLinkButton:hover {
+    background: #333434;
+}
+
+/* tablet styles */
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+}
+
+/* phone styles */
+@media only screen and (max-width: 767px) {
+
+    .infos {
+        padding: 2% 10%;
+    }
+
+    .introNameSE{
+        font-size: 18px;
+    }
+
+    .introNameSE h1:nth-of-type(2) {
+        font-size: 28px;
+    }
+
+    .infos h2{
+        font-size: 20px;
+        line-height: 30px;
+    }
 }

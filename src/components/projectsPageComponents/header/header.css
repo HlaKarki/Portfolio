@@ -3,19 +3,22 @@
     align-items: center;
     text-align: center;
 
-    font-family: 'Inter', sans-serif;
-    font-size: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 30px;
 
     padding: 60px;
 }
 
 /* tablet styles */
 @media only screen and (max-width: 1023px) and (min-width: 768px) {
+    .hlaPortfolio{
+        font-size: 27px;
+    }
 }
 
 /* phone styles */
 @media only screen and (max-width: 767px) {
     .hlaPortfolio{
-        font-size: 12px;
+        font-size: 25px;
     }
 }

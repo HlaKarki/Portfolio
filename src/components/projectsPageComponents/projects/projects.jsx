@@ -72,7 +72,7 @@ const ProjectsContent = () => {
     const project2Info = {
         gifSource: riceCADGIF,
         projectDesc1: "I collaborated with a team of talented web developers to create a cutting-edge project that showcases our skills in front-end development, back-end development, and UX design",
-        projectDesc2: "riceCAD, is a lightweight, online CAD (computer-assisted design tool) for generating schematics that can be used by OpenComputers robots (utilizing the riceBUILD program) to build your projects in game automatically! You design it, you publish it, and your in-game minecraft robot builds it",
+        projectDesc2: "riceCAD is a lightweight, online CAD (computer-assisted design) tool for generating schematics that can be used by OpenComputers robots (utilizing the riceBUILD program) to build your projects in-game (Minecraft) automatically! You design it, you publish it, and your in-game robot builds it",
         titleButtonText: "riceCAD online",
         year: "2022"
     };
