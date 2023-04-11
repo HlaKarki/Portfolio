@@ -1,0 +1,34 @@
+.navPathLinks {
+    margin: 5% 0 0 10%;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+}
+
+.navPathLinks a{
+    text-decoration: none;
+    color: black;
+}
+
+.navPathLinks a:first-of-type{
+    color: #989898;
+}
+
+.navPathLinks a:hover{
+    text-decoration: underline;
+}
+
+.navPathLinks a:first-of-type:hover{
+    text-decoration: none;
+    color: #ae0000;
+}
+
+/* tablet styles */
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+}
+
+/* phone styles */
+@media only screen and (max-width: 767px) {
+    .navPathLinks {
+        margin: 5% 0 0 2%;
+    }
+}
