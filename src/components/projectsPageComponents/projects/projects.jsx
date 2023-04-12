@@ -15,7 +15,7 @@ const ProjectsContent = () => {
     }
     useEffect(() => {
         const project1Links = [
-            "https://github.com/HlaKarki/CS361Project/tree/GuessiT.v.2",
+            "https://github.com/HlaKarki/GuessIt",
             "https://guessit.herokuapp.com",
         ];
         const project2Links = [
