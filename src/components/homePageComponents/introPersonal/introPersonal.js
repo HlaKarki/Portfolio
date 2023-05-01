@@ -8,7 +8,7 @@ const IntroPersonal = () => {
         <div className="infos">
             <div className="introNameSE">
                 <h1>Hi, I'm Hla Htun</h1>
-                <h1>Software Engineer</h1>
+                <h1>Software Developer</h1>
             </div>
 
             <h2>{personalDescription}</h2>
