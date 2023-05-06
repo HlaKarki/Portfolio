@@ -11,7 +11,8 @@ const ProjectsContent = () => {
     const [webLink, setWebLink] = useState("");
 
     const handleClick = (link) => {
-        window.location.href = link
+        // window.location.href = link
+        window.open(link, "_blank")
     }
     useEffect(() => {
         const project1Links = [
