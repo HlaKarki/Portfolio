@@ -16,7 +16,7 @@ const ProjectsContent = () => {
     useEffect(() => {
         const project1Links = [
             "https://github.com/HlaKarki/GuessIt",
-            "https://guessit.herokuapp.com",
+            "https://snowy-surf-9881.fly.dev/",
         ];
         const project2Links = [
             "https://github.com/trentonyo/riceCAD",
