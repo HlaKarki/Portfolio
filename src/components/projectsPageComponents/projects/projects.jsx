@@ -4,6 +4,7 @@ import './projects.css'
 import { default as ProjectTemplate } from './projectTemplate'
 import riceCADGIF from '../../../assests/riceCAD.gif'
 import guessItGIF from '../../../assests/guessIt.gif'
+import uniCourseGIF from '../../../assests/uniCourse.gif'
 
 const ProjectsContent = () => {
 
@@ -23,6 +24,10 @@ const ProjectsContent = () => {
             "https://github.com/trentonyo/riceCAD",
             "https://ricecad.herokuapp.com",
         ];
+        const project3Links = [
+            "https://github.com/HlaKarki/CS340Project",
+            // "https://flip2.engr.oregonstate.edu:2015/"
+        ]
 
         const links = document.querySelector(".links");
         const modalBackdrop = document.getElementById("modal-backdrop");
@@ -40,6 +45,10 @@ const ProjectsContent = () => {
                     } else if (linkButton.textContent.includes("riceCAD")) {
                         setRepoLink(project2Links[0]);
                         setWebLink(project2Links[1]);
+                    }
+                    else if (linkButton.textContent.includes("University Course Planner")) {
+                        setRepoLink(project3Links[0]);
+                        setWebLink("");
                     }
                 });
             });
@@ -78,16 +87,34 @@ const ProjectsContent = () => {
         year: "2022"
     };
 
+    const project3Info = {
+        gifSource: uniCourseGIF,
+        projectDesc1: "I developed a robust university course planner as a practical application of the knowledge acquired during my database course. This dynamic website seamlessly incorporates the powerful Database Management System, MariaDB, to provide a comprehensive and user-friendly experience.",
+        projectDesc2: "The course planner website operates by retrieving real-time data from a meticulously designed schema hosted on Oregon State University's flip servers. Through direct connection with the university's database, this platform enables users to access up-to-date course information, including class schedules, prerequisites, and availability.\n" +
+            "        Additionally, the website empowers users with the ability to interact with the database in a meaningful way. It allows for the insertion of new course data, facilitating updates to existing records, and even provides options to remove outdated or irrelevant information. By integrating these functionalities, the course planner ensures that users can effectively plan their academic journey and make informed decisions.\n" +
+            "        With the seamless integration of MariaDB, a robust database management system, and a user-friendly interface, the university course planner demonstrates my expertise in database-driven web development and showcases my ability to deliver practical solutions in an educational context.",
+        titleButtonText: "University Course Planner",
+        year: "2023"
+    };
+
+
+
+
     return (
         <div>
 
+            <ProjectTemplate {...project3Info} />
             <ProjectTemplate {...project1Info} />
             <ProjectTemplate {...project2Info} />
 
             <div id="modal-backdrop" className="hidden"></div>
             <div className="links hidden">
                 <button onClick={ ()=> handleClick(repoLink)} id="gitHubButton">GitHub Repository</button>
-                <button onClick={ ()=> handleClick(webLink)} id="webLinkButton">Website Link</button>
+                {
+                    webLink !== "" &&
+                    <button onClick={() => handleClick(webLink)} id="webLinkButton">Website Link</button>
+                }
+
             </div>
         </div>
     )
