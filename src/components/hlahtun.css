@@ -1,14 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-.paragraph {
-    margin-top: 20vh;
-    font-family: 'Roboto', sans-serif;
-    font-size: 200px;
-    color: white;
+.svg {
+    margin-top: 25%;
 }
 
-.letters, #ia, #oa, .hs {
+.letters, #ia, #oa, .hs, #l {
     stroke: black;
     stroke-width: 0.5px;
     fill: none;
+}
+
+.intro {
+    position: relative;
+    top: 400px;
+    font-family: Roboto, sans-serif;
+    font-size: 10vh;
 }
