@@ -7,7 +7,7 @@
     color: white;
 }
 
-.box {
+.letters, #ia, #oa, .hs {
     stroke: black;
     stroke-width: 0.5px;
     fill: none;
