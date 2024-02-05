@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.paragraph {
+    margin-top: 20vh;
+    font-family: 'Roboto', sans-serif;
+    font-size: 200px;
+    color: white;
+}
+
+.box {
+    stroke: black;
+    stroke-width: 0.5px;
+    fill: none;
+}
