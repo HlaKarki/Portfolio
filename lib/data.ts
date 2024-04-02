@@ -4,7 +4,7 @@ import { FaPython } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import puzzleFuzionImg from "@/public/images/puzzle-fuzion.png";
 import adventureAIImg from "@/public/images/adventure-ai.png";
-import masterMindImg from "@/public/corpcomment.png";
+import masterMindImg from "@/public/images/mastermind.png";
 import coursePlannerImg from "@/public/images/course-planner.gif";
 import riceCADImg from "@/public/images/ricecad.png"
 
@@ -67,8 +67,9 @@ export const projectsData = [
     title: "PuzzleFuzion",
     description:
         "Developed a real-time multiplayer puzzle game with innovative mechanics and seamless user experiences.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
+    tags: ["React", "Convex", "Tailwind", "Redux"],
     imageUrl: puzzleFuzionImg,
+    siteUrl: "https://puzzle-fuzion.vercel.app/"
   },
   {
     title: "AdventureAI",
@@ -76,6 +77,7 @@ export const projectsData = [
         "Led the front-end development of a text-based RPG game integrating AI for dynamic content generation.",
     tags: ["TypeScript", "React", "Convex", "Tailwind"],
     imageUrl: adventureAIImg,
+    siteUrl: "https://adventure-ai.vercel.app/"
   },
   {
     title: "MasterMind",
@@ -83,6 +85,7 @@ export const projectsData = [
         "Developed a Mastermind game clone in Assembly language, demonstrating low-level programming proficiency.",
     tags: ["Assembly"],
     imageUrl: masterMindImg,
+    siteUrl: "https://github.com/trentonyo/Mastermind-Assembly"
   },
   {
     title: "CoursePlanner",
@@ -90,6 +93,7 @@ export const projectsData = [
         "Led design and backend implementation for a Schedule/Course Planner website, improving user experience.",
     tags: ["JavaScript", "CSS", "MariaDB"],
     imageUrl: coursePlannerImg,
+    siteUrl: "https://github.com/HlaKarki/CoursePlanner"
   },
   {
     title: "riceCAD",
@@ -97,6 +101,7 @@ export const projectsData = [
         "Developed a lightweight web-based CAD tool for Minecraft, leading frontend development.",
     tags: ["JavaScript", "Handlebars"],
     imageUrl: riceCADImg,
+    siteUrl: "https://ricecad.herokuapp.com/"
   },
 ] as const;
 
