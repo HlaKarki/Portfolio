@@ -14,8 +14,8 @@ export default function Colors() {
     const generateShades = (color: string) => {
         if (color[0] !== "#") {
             color = "#" + color
-            setColor(color)
         }
+        setColor(color)
         const shades = getShades(color, 10)
         setGeneratedColors(shades)
     }
@@ -41,7 +41,7 @@ export default function Colors() {
                             className="border-0 rounded-md"
                             type="color"
                             onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                                setColor(e.target.value)
+                                generateShades(e.target.value)
                             }
                             value={color}
                         />
