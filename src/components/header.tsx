@@ -1,8 +1,10 @@
+"use client"
+
 import Link from "next/link";
 import { ThemeToggle } from "@/components/darkMode/toggleButton";
 import { CommandPalette } from "@/components/commandDialog";
 import React from "react";
-import { Menu } from "lucide-react"; // Assuming you're using lucide-react for icons
+import {MenuBar} from "@/components/menuBar";
 
 export default function Header() {
     return (
@@ -24,9 +26,7 @@ export default function Header() {
 
                     {/* Mobile menu button */}
                     <div className="md:hidden">
-                        <button className="text-gray-800 dark:text-white hover:text-primary-light transition-colors duration-300">
-                            <Menu size={24} />
-                        </button>
+                        <MenuBar />
                     </div>
 
                     {/* Center section: CommandPalette */}
