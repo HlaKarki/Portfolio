@@ -1,15 +1,15 @@
 'use client'
 
-import { ChangeEvent, useState, MouseEvent } from 'react'
+import {ChangeEvent, useState, MouseEvent} from 'react'
 import {useToast} from "@/components/ui/use-toast";
-import { cn } from '@/lib/utils';
+import {cn} from '@/lib/utils';
 import {Button} from "@/components/ui/button";
 
 export default function Colors() {
     const [color, setColor] = useState<string>('#D57B1D')
     const [backgroundColor, setBackgroundColor] = useState<string>('#E0C7C6')
     const [generatedColors, setGeneratedColors] = useState<string[]>([])
-    const { toast } = useToast()
+    const {toast} = useToast()
 
     const generateShades = (color: string) => {
         if (color[0] !== "#") {
@@ -22,8 +22,8 @@ export default function Colors() {
     const copyColor = async (shade: string) => {
         return navigator.clipboard.writeText(shade).then(() => {
             toast({
-                description: "Your text has been copied to clipboard: " + shade,
-            })
+                      description: "Your text has been copied to clipboard: " + shade,
+                  })
         })
     }
 
@@ -40,9 +40,7 @@ export default function Colors() {
                         <input
                             className="border-0 rounded-md"
                             type="color"
-                            onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                                generateShades(e.target.value)
-                            }
+                            onChange={(e: ChangeEvent<HTMLInputElement>) => generateShades(e.target.value)}
                             value={color}
                         />
                     </div>
@@ -53,9 +51,7 @@ export default function Colors() {
                         <input
                             className="border-0 rounded-md"
                             type="color"
-                            onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                                setBackgroundColor(e.target.value)
-                            }
+                            onChange={(e: ChangeEvent<HTMLInputElement>) => setBackgroundColor(e.target.value)}
                             value={backgroundColor}
                         />
                     </div>
@@ -68,9 +64,7 @@ export default function Colors() {
                         id="colorInput"
                         className="bg-white border border-amber-100 rounded-md p-1"
                         type="text"
-                        onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                            setColor(e.target.value)
-                        }
+                        onChange={(e: ChangeEvent<HTMLInputElement>) => setColor(e.target.value)}
                         value={color}
                     />
                 </div>
@@ -91,7 +85,7 @@ export default function Colors() {
                         <div
                             key={index}
                             className="w-20 h-20 rounded-md flex items-center justify-center text-white"
-                            style={{ backgroundColor: shade }}
+                            style={{backgroundColor: shade}}
                             onClick={() => copyColor(shade)}
                         >
                             {shade}
@@ -106,7 +100,9 @@ export default function Colors() {
 const getShades = (color: string, numShades: number): string[] => {
     let shades: string[] = []
     for (let i = -numShades; i <= numShades; i++) {
-        let shade = adjustBrightness(color, i * (100 / numShades))
+        let shade = adjustBrightness(color, i * (
+            100 / numShades
+        ))
         shades.push(shade)
     }
     return shades
@@ -117,9 +113,21 @@ const adjustBrightness = (color: string, percent: number): string => {
     let G = parseInt(color.substring(3, 5), 16)
     let B = parseInt(color.substring(5, 7), 16)
 
-    R = Math.min(255, Math.max(0, Math.floor(R * (1 + percent / 100))))
-    G = Math.min(255, Math.max(0, Math.floor(G * (1 + percent / 100))))
-    B = Math.min(255, Math.max(0, Math.floor(B * (1 + percent / 100))))
+    R = Math.min(
+        255, Math.max(
+            0, Math.floor(R * (
+                1 + percent / 100
+            ))))
+    G = Math.min(
+        255, Math.max(
+            0, Math.floor(G * (
+                1 + percent / 100
+            ))))
+    B = Math.min(
+        255, Math.max(
+            0, Math.floor(B * (
+                1 + percent / 100
+            ))))
 
     let RR = R.toString(16).padStart(2, '0')
     let GG = G.toString(16).padStart(2, '0')
