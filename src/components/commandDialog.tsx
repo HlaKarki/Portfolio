@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import {Moon, Settings, Smile, Sun, User,} from "lucide-react"
+import {Moon, Settings, Smile, Sun, User, Hammer, Wrench, FolderOpen, HomeIcon,} from "lucide-react"
 
 import {
     CommandDialog,
@@ -14,11 +14,15 @@ import {
     CommandShortcut,
 } from "@/components/ui/command"
 import {useTheme} from "next-themes";
+import {usePathname, useRouter} from "next/navigation";
+
+import {useScrollToSection} from "@/app/hooks/useScrollToSection";
 
 export function CommandPalette() {
     const [open, setOpen] = React.useState(false)
-
+    const pathname = usePathname()
     const {setTheme, theme} = useTheme()
+    const router = useRouter()
 
     const toggleTheme = React.useCallback(() => {
         setTheme(theme === 'dark' ? 'light' : 'dark')
@@ -51,6 +55,35 @@ export function CommandPalette() {
         command()
     }, [])
 
+    const scrollToSection = React.useCallback((sectionId: string) => {
+        setOpen(false)
+        // If we're not on the home page, we can't scroll directly
+        if (pathname !== '/') {
+            // We'll handle the scroll after navigation in a useEffect
+            console.log("in here?")
+            router.push(`/#${sectionId}`);
+            return
+        }
+        // If we're on the home page, scroll immediately
+        const section = document.getElementById(sectionId)
+        if (section) {
+            section.scrollIntoView()
+        }
+    }, [pathname])
+
+    // This effect handles scrolling after navigation
+    React.useEffect(() => {
+        if (pathname === '/' && window.location.hash) {
+            const sectionId = window.location.hash.slice(1) // remove the '#'
+            const section = document.getElementById(sectionId)
+            if (section) {
+                setTimeout(() => {
+                    section.scrollIntoView()
+                }, 0)
+            }
+        }
+    }, [pathname])
+
     return (
         <>
             <p className="text-sm text-muted-foreground">
@@ -70,6 +103,14 @@ export function CommandPalette() {
                             <Smile className="mr-2 h-4 w-4"/>
                             <span>Search Emoji</span>
                         </CommandItem>
+                        <CommandItem onSelect={() => runCommand(() => scrollToSection("projects"))}>
+                            <FolderOpen className="mr-2 h-4 w-4"/>
+                            <span>Projects</span>
+                        </CommandItem>
+                        <CommandItem onSelect={() => runCommand(() => scrollToSection("tools"))}>
+                            <Wrench className="mr-2 h-4 w-4"/>
+                            <span>Tools</span>
+                        </CommandItem>
                     </CommandGroup>
                     <CommandSeparator/>
                     <CommandGroup heading="Settings">
@@ -87,6 +128,12 @@ export function CommandPalette() {
                             <Settings className="mr-2 h-4 w-4"/>
                             <span>Settings</span>
                             <CommandShortcut>⌘S</CommandShortcut>
+                        </CommandItem>
+                    </CommandGroup>
+                    <CommandGroup heading="Navigation">
+                        <CommandItem onSelect={() => runCommand(() => scrollToSection("home"))}>
+                            <HomeIcon className="mr-2 h-4 w-4"/>
+                            <span>Home</span>
                         </CommandItem>
                     </CommandGroup>
                 </CommandList>
