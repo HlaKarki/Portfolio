@@ -4,6 +4,7 @@ import "./styling/globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import React from "react";
 import ThemeProvider from "@/components/darkMode/theme-provider";
+import Header from "@/components/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,13 +20,14 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" suppressHydrationWarning>
-        <body className={inter.className}>
+        <body className={inter.className + " custom-scrollbar"}>
         <ThemeProvider
             attribute="class"
             defaultTheme="system"
             enableSystem
             disableTransitionOnChange
         >
+            <Header />
             {children}
             <Toaster />
         </ThemeProvider>
