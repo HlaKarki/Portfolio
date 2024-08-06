@@ -26,6 +26,7 @@
 
     .custom-scrollbar::-webkit-scrollbar-track {
         background: transparent;
+        background: var(--scrollbar-bg);
     }
 
     .custom-scrollbar::-webkit-scrollbar-thumb {
@@ -37,9 +38,10 @@
 
 :root {
     --scrollbar-thumb: rgba(0, 0, 0, 0.7);
+    --scrollbar-bg: white;
 }
 
 .dark {
-    /*--scrollbar-thumb: rgba(255, 255, 255, 0.5);*/
-    --scrollbar-thumb: rgba(189, 26, 255, 0.7);
+    --scrollbar-thumb: #9e63e6;
+    --scrollbar-bg: #210F2E;
 }
