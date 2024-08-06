@@ -14,7 +14,7 @@ export function MenuBar() {
     const {setTheme, theme} = useTheme()
     const toggleTheme = React.useCallback(() => {
         setTheme(theme === 'dark' ? 'light' : 'dark')
-    }, [theme, setTheme, open])
+    }, [theme, setTheme])
 
     return (
         <div className="cursor-pointer">
